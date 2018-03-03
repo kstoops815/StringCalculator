@@ -23,7 +23,15 @@ namespace StringCalculatorTests
         [Test]
         public void Entering_one_number_results_in_returning_the_same_number()
         {
+            //Arrange
+            var number = "3";
+            var numberAdder = new NumberAdder();
 
+            //Act
+            var total = numberAdder.AddNumbers(number);
+
+            //Assert
+            Assert.AreEqual(3, total);
         }
     }
 }

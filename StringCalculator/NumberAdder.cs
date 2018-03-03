@@ -14,7 +14,12 @@ namespace StringCalculator
             {
                 return 0;
             }
-            return 0;
+            if(number != "")
+            {
+                var total = Convert.ToInt32(number);
+                return total;
+            }
+            return 11111;
         }
         
     }
