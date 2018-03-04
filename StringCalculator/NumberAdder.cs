@@ -16,7 +16,7 @@ namespace StringCalculator
             {
                 return 0;
             }
-            else if(number != "")
+            else if(number != "" && number.Length == 1)
             {
                 sum = Convert.ToInt32(number);
                 return sum;
