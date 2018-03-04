@@ -14,10 +14,10 @@ namespace StringCalculatorTests
             var numberAdder = new NumberAdder();
 
             //Act
-            var total = numberAdder.AddNumbers(number);
+            var sum = numberAdder.AddNumbers(number);
 
             //Assert
-            Assert.AreEqual(0, total);
+            Assert.AreEqual(0, sum);
         }
 
         [Test]
@@ -28,10 +28,24 @@ namespace StringCalculatorTests
             var numberAdder = new NumberAdder();
 
             //Act
-            var total = numberAdder.AddNumbers(number);
+            var sum = numberAdder.AddNumbers(number);
 
             //Assert
-            Assert.AreEqual(3, total);
+            Assert.AreEqual(3, sum);
+        }
+
+        [Test]
+        public void Entering_two_numbers_results_in_returning_the_sum_of_both_numbers()
+        {
+            //Arrange
+            var number = "4, 7";
+            var numberAdder = new NumberAdder();
+
+            //Act
+            var sum = numberAdder.AddNumbers(number);
+
+            //Assert
+            Assert.AreEqual(11, sum);
         }
     }
 }
